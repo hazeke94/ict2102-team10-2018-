@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/colorBg">
+
+    <TextView
+        android:id="@+id/tvDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:text="Are you sure you want to stop"
+        android:textSize="16dp"
+        android:textColor="@color/normalText"/>
+
+    <TextView
+        android:id="@+id/tvDisplay2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tvDisplay"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:text="making an account?"
+        android:textSize="16dp"
+        android:textColor="@color/normalText"/>
+
+    <Button
+        android:id="@+id/btnleave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDisplay2"
+        android:layout_alignEnd="@id/tvDisplay"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+
+        android:text="Yes"
+        android:textColor="#FAFAFA"
+        android:background="@drawable/normalbutton"
+        android:textSize="15dp"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btnstay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDisplay2"
+        android:layout_alignStart="@id/tvDisplay"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+
+        android:text="No"
+        android:textColor="@color/colorPrimary"
+        android:background="@drawable/strokebutton"
+        android:textSize="15dp"
+        android:textAllCaps="false" />
+
+</RelativeLayout>

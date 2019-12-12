@@ -1,0 +1,148 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:id="@+id/profileLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin">
+
+            <!--<ImageView-->
+                <!--android:id="@+id/profileImage"-->
+                <!--android:layout_width="200dp"-->
+                <!--android:layout_height="200dp"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_marginTop="@dimen/activity_vertical_margin"-->
+                <!--app:srcCompat="@drawable/profile" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/profileName"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/profileImage"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_marginTop="@dimen/activity_vertical_margin"-->
+                <!--android:text="Gary Barlow"-->
+                <!--android:textColor="@color/normalText"-->
+                <!--android:textSize="16dp"-->
+                <!--android:textStyle="bold" />-->
+
+            <!--New row-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/updateTitle"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_centerHorizontal="true"
+                android:text="Update your details"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/normalText"/>
+
+            <TextView
+                android:id="@+id/locationTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/updateTitle"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:text="LOCATION"
+                android:textColor="@color/normalText"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/locationline"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_below="@+id/locationTitle"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:background="@color/lightText" />
+
+            <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/AClocation"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/locationline"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:textSize="15dp"
+                android:text="London, United Kingdom" />
+
+            <!--New row-->
+
+            <TextView
+                android:id="@+id/dietaryTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/AClocation"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:text="DIETARY"
+                android:textColor="@color/normalText"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/dietaryline"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_below="@+id/dietaryTitle"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:background="@color/lightText" />
+
+            <Spinner
+                android:id="@+id/dietary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dietaryline"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:spinnerMode="dialog"
+                android:text="Vegetarian" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/dietary">
+                <Button
+                    android:id="@+id/btnCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="Cancel"
+                    android:textColor="@color/colorPrimary"
+                    android:background="@drawable/strokebutton"
+                    android:textSize="15dp"
+                    android:textAllCaps="false"/>
+
+                <Button
+                    android:id="@+id/btnUpdateProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/btnCancel"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:text="Update"
+                    android:textColor="#FAFAFA"
+                    android:background="@drawable/normalbutton"
+                    android:textSize="15dp"
+                    android:textAllCaps="false"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

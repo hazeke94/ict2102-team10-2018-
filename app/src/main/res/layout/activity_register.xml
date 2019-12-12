@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorBg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".register">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/layout_register">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/activity_horizontal_margin"
+                        android:paddingRight="@dimen/activity_horizontal_margin"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:paddingBottom="@dimen/activity_vertical_margin"
+                        android:layout_centerHorizontal="true">
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/nameTitle"
+                                android:paddingLeft="@dimen/activity_horizontal_margin"
+                                android:text="Enter name"
+                                android:textColor="@color/normalText"
+                                android:textStyle="bold"
+                                android:textSize="16dp"/>
+                            <EditText
+                                android:id="@+id/EDName"
+                                android:paddingTop="@dimen/activity_vertical_margin"
+                                android:paddingBottom="@dimen/activity_vertical_margin"
+                                android:paddingLeft="@dimen/activity_horizontal_margin"
+                                android:paddingRight="@dimen/activity_horizontal_margin"
+                                android:layout_below="@id/nameTitle"
+                                android:layout_width="300dp"
+                                android:layout_height="wrap_content"
+                                android:hint="Your name"
+                                android:backgroundTint="@color/lightText"
+                                android:inputType="textPersonName"
+                                android:textColorHint="@drawable/inputstyle"
+                                android:textColor="@color/normalText"
+                                android:textSize="16dp"
+                                android:textCursorDrawable="@null"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/emailTitle"
+                                android:layout_below="@id/EDName"
+                                android:layout_marginTop="15dp"
+                                android:paddingLeft="@dimen/activity_horizontal_margin"
+                                android:text="Enter email"
+                                android:textColor="@color/normalText"
+                                android:textStyle="bold"
+                                android:textSize="16dp"/>
+                            <EditText
+                                android:id="@+id/EDEmail"
+                                android:layout_width="300dp"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="@dimen/activity_vertical_margin"
+                                android:paddingBottom="@dimen/activity_vertical_margin"
+                                android:paddingLeft="@dimen/activity_horizontal_margin"
+                                android:paddingRight="@dimen/activity_horizontal_margin"
+                                android:layout_below="@id/emailTitle"
+                                android:hint="you@example.com"
+                                android:backgroundTint="@color/lightText"
+                                android:inputType="textWebEmailAddress"
+                                android:textColor="@color/normalText"
+                                android:textColorHint="@drawable/inputstyle"
+                                android:textCursorDrawable="@null"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/pwTitle"
+                                android:layout_below="@id/EDEmail"
+                                android:layout_marginTop="15dp"
+                                android:paddingLeft="@dimen/activity_horizontal_margin"
+                                android:text="Enter password"
+                                android:textColor="@color/normalText"
+                                android:textStyle="bold"
+                                android:textSize="16dp"/>
+                            <EditText
+                                android:id="@+id/EDPassword"
+                                android:layout_width="300dp"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="@dimen/activity_vertical_margin"
+                                android:paddingBottom="@dimen/activity_vertical_margin"
+                                android:paddingLeft="@dimen/activity_horizontal_margin"
+                                android:paddingRight="@dimen/activity_horizontal_margin"
+                                android:layout_below="@id/pwTitle"
+                                android:hint="Must have at least 6 characters"
+                                android:inputType="textPassword"
+                                android:backgroundTint="@color/lightText"
+                                android:textColor="@color/normalText"
+                                android:textColorHint="@drawable/inputstyle"
+                                android:textCursorDrawable="@null"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/locationTitle"
+                                android:layout_below="@id/EDPassword"
+                                android:layout_marginTop="15dp"
+                                android:paddingLeft="@dimen/activity_horizontal_margin"
+                                android:text="Enter country"
+                                android:textColor="@color/normalText"
+                                android:textStyle="bold"
+                                android:textSize="16dp"/>
+                            <AutoCompleteTextView
+                                android:id="@+id/ACLocation"
+                                android:layout_width="300dp"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="@dimen/activity_vertical_margin"
+                                android:paddingBottom="@dimen/activity_vertical_margin"
+                                android:paddingLeft="@dimen/activity_horizontal_margin"
+                                android:paddingRight="@dimen/activity_horizontal_margin"
+                                android:layout_below="@id/locationTitle"
+                                android:hint="Country"
+                                android:backgroundTint="@color/lightText"
+                                android:inputType="textWebEmailAddress"
+                                android:textColor="@color/normalText"
+                                android:textColorHint="@drawable/inputstyle"
+                                android:textCursorDrawable="@null"/>
+
+                            <RelativeLayout
+                                android:layout_width="300dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/ACLocation"
+                                android:layout_marginTop="15dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                                    android:id="@id/dobTitle"
+                                    android:text="Select date of birth"
+                                    android:textColor="@color/normalText"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold"/>
+                                <DatePicker
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_below="@id/dobTitle"
+                                    android:id="@+id/EDob"
+                                    android:datePickerMode="spinner"
+                                    android:calendarViewShown="false"
+                                    android:background="@color/normalText"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                                    android:layout_below="@id/EDob"
+                                    android:id="@+id/dietTitle"
+                                    android:text="Select dietary preference"
+                                    android:textColor="@color/normalText"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold"
+                                    android:layout_marginTop="15dp"/>
+                                <Spinner
+                                    android:id="@+id/spDiet"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/dietTitle"
+                                    android:spinnerMode="dialog"
+                                    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+                                    android:background="@color/normalText"
+                                    android:paddingTop="@dimen/activity_vertical_margin"
+                                    android:paddingBottom="@dimen/activity_vertical_margin"
+                                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                                    android:paddingRight="@dimen/activity_horizontal_margin">
+                                </Spinner>
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            <!---->
+            <!--Buttons-->
+            <!---->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_register">
+                <Button
+                    android:id="@+id/btnConfirmRegister"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="290dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/normalbutton"
+                    android:padding="15dp"
+                    android:text="Make account"
+                    android:textAllCaps="false"
+                    android:textColor="#FAFAFA"
+                    android:textSize="15dp" />
+
+                <Button
+                    android:id="@+id/btnCancel"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="290dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/btnConfirmRegister"
+                    android:background="@drawable/strokebutton"
+                    android:padding="10dp"
+                    android:text="Cancel registration"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Filter">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <!---->
+            <!--TOTAL BUDGET-->
+            <!---->
+
+            <RelativeLayout
+                android:id="@+id/budgetPaxBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin">
+                <TextView
+                    android:id="@+id/tvBudgetDisplay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                    android:text="TOTAL BUDGET (PER PAX)"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:textColor="@color/normalText"/>
+
+                <TextView
+                    android:id="@+id/tvBudget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvBudgetDisplay"
+                    android:layout_centerHorizontal="true"
+                    android:text="$1500"
+                    android:textColor="@color/normalText"
+                    android:textSize="18dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvMin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/budgetSeeker"
+                    android:layout_alignLeft="@id/budgetSeeker"
+                    android:textColor="@color/lightText"/>
+                <TextView
+                    android:id="@+id/tvMax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/budgetSeeker"
+                    android:layout_alignRight="@id/budgetSeeker"
+                    android:textColor="@color/lightText"/>
+
+                <SeekBar
+                    android:id="@+id/budgetSeeker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvBudget"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:min="300"
+                    android:max="3000"
+                    android:progress="1650"/>
+            </RelativeLayout>
+
+            <!---->
+            <!--TRAVEL COMPANIONS-->
+            <!---->
+
+            <RelativeLayout
+                android:id="@+id/travelGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_below="@id/budgetPaxBox">
+
+                <TextView
+                    android:id="@+id/tvPeople"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:text="PEOPLE"
+                    android:textColor="@color/normalText"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:id="@+id/firstTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/tvPeople"
+                    android:layout_centerInParent="true">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp">
+                        <ImageButton
+                            android:id="@+id/imgButtonCouple"
+                            android:layout_width="95dp"
+                            android:layout_height="95dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/filter_btn_animation"
+                            android:src="@drawable/filtercouple"
+                            android:padding="10dp"
+                            android:scaleType="fitCenter"/>
+
+                        <TextView
+                            android:id="@+id/coupleText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imgButtonCouple"
+                            android:layout_centerInParent="true"
+                            android:text="Couple"
+                            android:textStyle="bold"
+                            android:textColor="@color/lightText"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvPeople"
+                        android:layout_marginLeft="20dp">
+                        <ImageButton
+                            android:id="@+id/imgButtonSolo"
+                            android:layout_width="95dp"
+                            android:layout_height="95dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/filter_btn_animation"
+                            android:src="@drawable/filtersolo"
+                            android:padding="10dp"
+                            android:scaleType="fitCenter"/>
+
+                        <TextView
+                            android:id="@+id/soloText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/imgButtonSolo"
+                            android:layout_centerInParent="true"
+                            android:text="Solo"
+                            android:textStyle="bold"
+                            android:textColor="@color/lightText"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/secondTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/firstTwo"
+                    android:layout_centerInParent="true">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp">
+                        <ImageButton
+                            android:id="@+id/imgButtonFamily"
+                            android:layout_width="95dp"
+                            android:layout_height="95dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/filter_btn_animation"
+                            android:src="@drawable/filterfamily"
+                            android:padding="10dp"
+                            android:scaleType="fitCenter"/>
+
+                        <TextView
+                            android:id="@+id/familyText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imgButtonFamily"
+                            android:layout_centerInParent="true"
+                            android:text="Family"
+                            android:textStyle="bold"
+                            android:textColor="@color/lightText"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvPeople"
+                        android:layout_marginLeft="20dp">
+                        <ImageButton
+                            android:id="@+id/imgButtonFriends"
+                            android:layout_width="95dp"
+                            android:layout_height="95dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/filter_btn_animation"
+                            android:src="@drawable/filterfriends"
+                            android:padding="10dp"
+                            android:scaleType="fitCenter"/>
+
+                        <TextView
+                            android:id="@+id/friendsText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/imgButtonFriends"
+                            android:layout_centerInParent="true"
+                            android:text="Friends"
+                            android:textStyle="bold"
+                            android:textColor="@color/lightText"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!---->
+            <!--DURATION-->
+            <!---->
+
+            <RelativeLayout
+                android:id="@+id/travelDuration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_below="@id/travelGroup">
+                <TextView
+                    android:id="@+id/tvDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:text="DURATION"
+                    android:textColor="@color/normalText"
+                    android:textStyle="bold"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvDuration"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+                    <EditText
+                        android:id="@+id/start_date"
+                        android:focusable="false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        android:layout_weight="1"
+                        android:background="@drawable/dateborder"
+                        android:ems="8"
+                        android:hint="Depart Date"
+                        android:paddingLeft="10dp"
+                        android:paddingVertical="10dp"
+                        android:textSize="15dp"
+                        android:textColor="@color/lightText"/>
+
+                    <EditText
+                        android:id="@+id/end_date"
+                        android:focusable="false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        android:layout_toRightOf="@id/start_date"
+                        android:layout_weight="1"
+                        android:background="@drawable/dateborder"
+                        android:ems="8"
+                        android:hint="Return Date"
+                        android:paddingLeft="10dp"
+                        android:paddingVertical="10dp"
+                        android:textSize="15dp"
+                        android:textColor="@color/lightText"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <!---->
+            <!--NEXT BUTTON-->
+            <!---->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/travelDuration">
+                <Button
+                    android:id="@+id/next_btn"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="290dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/normalbutton"
+                    android:text="Next"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorBg"
+                    android:textSize="15dp"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="300dp"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:padding="5dp">
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <!-- Here you put the rest of your current view-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+        android:id="@+id/layoutclose"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:text="X"
+                android:textStyle="bold"
+                android:layout_gravity="end"
+                android:gravity="center"
+                android:id="@+id/tvClose2"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_register"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/layoutclose">
+        <EditText
+            android:id="@+id/EDName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="10dp"
+            android:paddingTop="10dp"
+            android:hint="Enter Name" />
+
+            <EditText
+            android:id="@+id/EDEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_below="@id/EDName"
+                android:paddingTop="10dp"
+            android:hint="Email" />
+
+        <EditText
+            android:id="@+id/EDPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_below="@id/EDEmail"
+            android:paddingTop="10dp"
+            android:hint="Password"
+            android:inputType="textPassword"/>
+
+        <AutoCompleteTextView
+            android:id="@+id/ACLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_below="@id/EDPassword"
+            android:paddingTop="10dp"
+            android:hint="Location" />
+
+            <DatePicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/EDob"
+                style="@style/MyDatePickerSpinnerStyle"
+                android:theme="@style/MyDatePickerSpinnerStyle"
+           />
+        <Spinner
+            android:id="@+id/spDiet"
+            android:layout_marginStart="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/EDob"
+            android:paddingTop="10dp"
+            >
+
+        </Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btnConfirmRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

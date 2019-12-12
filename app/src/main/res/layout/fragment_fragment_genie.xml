@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GenieFragment">
+
+    <RelativeLayout
+        android:id="@+id/lamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/btn_Destination">
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="266dp"
+            android:layout_height="200dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/genie" />
+
+        <TextView
+            android:id="@+id/genie_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_below="@+id/imageView4"
+            android:layout_centerHorizontal="true"
+            android:text="Not sure where to travel to?"
+            android:textSize="15dp"
+            android:textColor="@color/normalText"/>
+
+        <TextView
+            android:id="@+id/genie_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/genie_text1"
+            android:layout_centerHorizontal="true"
+            android:text="Allow me to find you a destination"
+            android:textSize="15dp"
+            android:textColor="@color/normalText"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_Destination"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/normalbutton"
+        android:padding="15dp"
+        android:text="Find destination"
+        android:textAllCaps="false"
+        android:textColor="#FFF"
+        android:textSize="15dp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:id="@+id/notFirst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_centerHorizontal="true"
+            android:text="Not a first-timer?"
+            android:textSize="15dp"
+            android:textColor="@color/normalText"/>
+
+        <TextView
+            android:id="@+id/notFirst2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_below="@id/notFirst"
+            android:layout_centerHorizontal="true"
+            android:text="View our past suggestions"
+            android:textSize="15dp"
+            android:textColor="@color/normalText"/>
+
+        <Button
+            android:id="@+id/btn_Results"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_below="@+id/notFirst2"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/strokebutton"
+            android:padding="10dp"
+            android:text="View past results"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15dp" />
+    </RelativeLayout>
+</RelativeLayout>

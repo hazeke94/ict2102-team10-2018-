@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".quiz">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="80dp">
+
+        <TextView
+            android:id="@+id/quizQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="QUESTION 1"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15dp"/>
+
+        <TextView
+            android:id="@+id/tvQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Where do you travel?"
+            android:textAlignment="center"
+            android:textColor="@color/lightText"
+            android:textSize="23dp" />
+
+        <ImageView
+            android:id="@+id/quizimage"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/quiz1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:paddingTop="5dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnOption1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="Option1"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:background="@drawable/quizbtn_animation"
+                android:textColor="@drawable/quizbtn_text"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btnOption2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:text="Option2"
+                android:layout_height="match_parent"
+                android:background="@drawable/quizbtn_animation"
+                android:textColor="@drawable/quizbtn_text"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/btnOption3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:text="Option3"
+                android:layout_height="match_parent"
+                android:background="@drawable/quizbtn_animation"
+                android:textColor="@drawable/quizbtn_text"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btnOption4"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:text="Option4"
+                android:layout_height="match_parent"
+                android:background="@drawable/quizbtn_animation"
+                android:textColor="@drawable/quizbtn_text"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

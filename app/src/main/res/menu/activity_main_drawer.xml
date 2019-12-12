@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <!--To Change menu id, update /nav_NewName
+               Change name title=newname
+               Change Icon to other img resource, add new image resource into res/drawable folder-->
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_genie"
+            android:title="Travel Genie"/>
+        <item
+            android:id="@+id/nav_geniehistory"
+            android:icon="@drawable/ic_menu_history"
+            android:title="Genie History" />
+        <item
+            android:id="@+id/nav_Travel"
+            android:icon="@drawable/ic_main_map"
+            android:title="Countries Travelled" />
+        <item
+            android:id="@+id/nav_wishlist"
+            android:icon="@drawable/ic_menu_logout"
+            android:title="Logout" />
+    </group>
+
+
+</menu>
